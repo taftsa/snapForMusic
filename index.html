@@ -1,0 +1,180 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+				
+		<title>SNAP: Seth's New Advising Platform</title>
+		
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script src="script.js"></script>
+		
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div id="topBar">
+			<div id="menu">
+				<div id="title">SNAP</div>
+				<div class="titleInfo">v 1.0</div>
+				
+				<div class="spacer">.</div>
+				<div class="spacer">.</div>		
+				
+				<div class="menuButton" id="save">&#128427;</div>
+				<div class="menuButton" id="load"><span id="loadAFile">&UpArrowBar;</span><input type="file" id="fileSelect"></div>
+				
+				<div class="spacer">.</div>
+				
+				<div class="menuInfo calNotDone" id="years">&#128467;</div>
+				<div class="menuInfo" id="totalCredits">###</div>
+				<div class="menuInfo" id="yearInSchool">##</div>
+				
+				<div id="nameBlock"><input id="name" title="studentName" placeholder="student name here"><div id="submitName">&#11183;</div></div>
+				
+				<div class="spacer">.</div>
+				
+				<div class="menuButton" id="addSemesterF">&#10086;</div>
+				<div class="menuButton" id="addSemesterS">&#10048;</div>
+				<div class="menuButton" id="addSummers">&#10039;</div>			
+				<div class="menuButton" id="addTransfer">&#8631;</div>
+				
+				<div class="spacer">.</div>
+				
+				<div class="menuButton" id="en100">&#10000;</div>
+				<div class="menuButton" id="honors">&#127894;</div>
+				<div class="menuButton" id="globalXP">&#128506;</div>
+				<div class="menuButton" id="celp">&#10015;</div>				
+			</div>
+		</div>
+		<div id="requirementsLists">	
+			<!--SLOs--> 
+			<div class="slo" id="SLO1"><div><div class="sloCode">SLO1</div></div><div class="sloName">Communic.</div></div>
+			<div class="slo" id="SLO2"><div><div class="sloCode">SLO2</div></div><div class="sloName">Lit. Comp.</div></div>
+			<div class="slo" id="SLO3"><div><div class="sloCode">SLO3</div></div><div class="sloName">Fine Art</div></div>
+			<div class="slo" id="SLO4"><div><div class="sloCode">SLO4</div></div><div class="sloName">History</div></div>
+			<div class="slo" id="SLO5"><div><div class="sloCode">SLO5</div></div><div class="sloName">Social Sci.</div></div>
+			<div class="slo" id="SLO6"><div><div class="sloCode">SLO6</div></div><div class="sloName">Mathematics</div></div>
+			<div class="slo" id="SLO7"><div><div class="sloCode">SLO7</div></div><div class="sloName">Lab Sci.</div></div>
+			<div class="slo" id="SLO8"><div><div class="sloCode">SLO8</div></div><div class="sloName">Comp. Sci.</div></div>
+			<div class="slo" id="SLO9"><div><div class="sloCode">SLO9</div></div><div class="sloName">Wellness</div></div>
+			<div class="slo" id="SLO10"><div><div class="sloCode">SLO10</div></div><div class="sloName">Ethics</div></div>
+			
+			<!--CMPs--> 
+			<div class="slo" id="CMP12"><div class="sloCode">CMP1/2</div><div class="sloName">Crit. Think.</div></div>
+			<div class="slo" id="CMP3"><div class="sloCode">CMP3</div><div class="sloName">AWE</div></div>
+			
+			<!--Ensemble Counts--> 
+			<div id="pensembles" class="ensembles"><div><div class="reqCourseCode">ME XXX</div></div><div class="ensembleName">Primary</div><div class="ensembleCount" id="pensembleCount">#</div></div>
+			<div id="sensembles" class="ensembles"><div><div class="reqCourseCode">ME XXX</div></div><div class="ensembleName">Secondary</div><div class="ensembleCount" id="sensembleCount">#</div></div>
+			
+			<!-- Requirements -->
+			<div class="requirement notDone musicReq"><div><div class="reqCourseCode">MU 000</div></div><div class="reqName">Piano</div><div class="piano topBigBadge">&#119218;</div></div>
+			<div class="requirement notDone musicReq" id="jqe"><div><div class="reqCourseCode">MU 003</div></div><div class="reqName">JQE</div><div class="jqe topBigBadge">&#119136;</div></div>
+		</div>
+		<div id="allSemestersAndRequirements">
+			<div class="semester">
+				<h2 class="semesterName"><div class="fall bigBadge">&#10086;</div>Fall <span class="year">1</span> <span class="semesterCredits" id="semester1">#</span></h2>
+				<div class="fallSem semesterList" id="1">
+					<div class="class notDone genEd slo6 summerClass"><span class="courseCode">MA XXX</span><span class="courseTitle">Math</span><div class="credits">3</div><div class="summer badge">&#10039;</div><div class="courseTime">9a MWF (111)</div><div class="online badge">&#128435;</div></div>
+					<div class="fallClass class notDone music"><span class="courseCode">MU 119</span><span class="courseTitle">Fund. of Mus. Theory</span><div class="credits">3</div><div class="fall only">&#10086;</div><div class="courseTime">10a MWF</div></div>
+					<div class="class notDone genEd cmp12 nonHonors"><span class="courseCode" id="cmp2Code">ID 150</span><span class="courseTitle">Academic Inquiry</span><div class="credits">3</div><div class="courseTime">1p MWF</div></div>
+					<div class="fallClass class notDone music slo3"><span class="courseCode">MU 208</span><span class="courseTitle">Music Survey</span><div class="credits">3</div><div class="fall only">&#10086;</div><div class="courseTime">8a TR</div></div>
+					<div class="fallClass class notDone music"><span class="courseCode">MU 102</span><span class="courseTitle">Class Piano I</span><div class="credits">1</div><div class="fall only">&#10086;</div><div class="courseTime">9:30a, 11a TR</div></div>
+					<div class="class notDone music"><span class="courseCode">ML 1XX</span><span class="courseTitle">Applied Lessons</span><div class="credits">1</div><div class="courseTime">2p T*</div></div>
+					<div class="pensemble class notDone music slo3"><span class="courseCode">ME 1XX</span><span class="courseTitle">Primary Ensemble</span><div class="p ensemble credits">1</div></div>
+					<div class="sensemble class notDone music slo3"><span class="courseCode">ME 1XX</span><span class="courseTitle">Secondary Ensemble</span><div class="s ensemble credits">0</div></div>
+					<div class="class notDone genEd slo1 cmp3 nonHonors summerClass"><span class="courseCode">EN 101</span><span class="courseTitle">Freshman Composition</span><div class="credits">3</div><div class="summer badge">&#10039;</div><div class="online badge">&#128435;</div></div>
+				</div>
+			</div>
+			<div class="semester">
+				<h2 class="semesterName"><div class="spring bigBadge">&#10048;</div>Spring <span class="year">1</span> <span class="semesterCredits" id="semester2">#</span></h2>
+				<div class="springSem semesterList" id="2">
+					<div class="springClass class notDone music"><span class="courseCode">MU 139</span><span class="courseTitle">Music Theory I</span><div class="credits">3</div><div class="spring only">&#10048;</div><div class="courseTime">8a MWF</div></div>
+					<div class="springClass class notDone music"><span class="courseCode">MU 129</span><span class="courseTitle">Beg. Aural Skills</span><div class="credits">2</div><div class="spring only">&#10048;</div><div class="courseTime">9a MWF</div></div>
+					<div class="springClass class notDone music"><span class="courseCode">MU 103</span><span class="courseTitle">Class Piano II</span><div class="credits">1</div><div class="spring only">&#10048;</div><div class="courseTime">11a, 12:30p TR</div></div>
+					<div class="class notDone music"><span class="courseCode">ML 1XX</span><span class="courseTitle">Applied Lessons</span><div class="credits">1</div><div class="courseTime">2p T*</div></div>
+					<div class="pensemble class notDone music slo3"><span class="courseCode">ME 1XX</span><span class="courseTitle">Primary Ensemble</span><div class="p ensemble credits">1</div></div>
+					<div class="sensemble class notDone music slo3"><span class="courseCode">ME 1XX</span><span class="courseTitle">Secondary Ensemble</span><div class="s ensemble credits">0</div></div>
+					<div class="class notDone genEd slo1 cmp3 nonHonors summerClass"><span class="courseCode">EN 102</span><span class="courseTitle">Argument and Research</span><div class="credits">3</div><div class="summer badge">&#10039;</div><div class="online badge">&#128435;</div></div>
+					<div class="class notDone genEd slo7 summerClass"><span class="courseCode">XX XXX</span><span class="courseTitle">Lab Science</span><div class="credits">4</div><div class="summer badge">&#10039;</div><div class="online badge">&#128435;</div></div>
+				</div>
+			</div>
+			<div class="semester">
+				<h2 class="semesterName"><div class="fall bigBadge">&#10086;</div>Fall <span class="year">2</span> <span class= "semesterCredits" id="semester3">#</span></h2>
+				<div class="fallSem semesterList" id="3">
+					<div class="fallClass class notDone music"><span class="courseCode">MU 239</span><span class="courseTitle">Music Theory II</span><div class="credits">3</div><div class="fall only">&#10086;</div><div class="courseTime">8a MWF</div></div>
+					<div class="fallClass class notDone music"><span class="courseCode">MU 229</span><span class="courseTitle">Int. Aural Skills</span><div class="credits">2</div><div class="fall only">&#10086;</div><div class="courseTime">9a MWF</div></div>
+					<div class="class notDone music"><span class="courseCode">ML 2XX</span><span class="courseTitle">Applied Lessons</span><div class="credits">1</div><div class="courseTime">2p T*</div></div>
+					<div class="pensemble class notDone music slo3"><span class="courseCode">ME 2XX</span><span class="courseTitle">Primary Ensemble</span><div class="p ensemble credits">1</div></div>
+					<div class="sensemble class notDone music slo3"><span class="courseCode">ME 2XX</span><span class="courseTitle">Secondary Ensemble</span><div class="s ensemble credits">1</div></div>
+					<div class="class notDone genEd slo5 summerClass"><span class="courseCode">XX XXX</span><span class="courseTitle">Social Science</span><div class="credits">3</div><div class="summer badge">&#10039;</div><div class="online badge">&#128435;</div></div>
+					<div class="class notDone genEd slo1 nonHonors summerClass"><span class="courseCode">EN 105</span><span class="courseTitle">Public Speaking</span><div class="credits">3</div><div class="summer badge">&#10039;</div><div class="online badge">&#128435;</div></div>
+				</div>
+				<div class="semesterCount"></div>
+			</div>
+			<div class="semester">
+				<h2 class="semesterName"><div class="spring bigBadge">&#10048;</div>Spring <span class="year">2</span> <span class="semesterCredits" id="semester4">#</span></h2>
+				<div class="springSem semesterList" id="4">
+					<div class="springClass class notDone music"><span class="courseCode">MU 339</span><span class="courseTitle">Music Theory III</span><div class="credits">3</div><div class="spring only">&#10048;</div><div class="courseTime">8a MWF</div></div>
+					<div class="springClass class notDone music"><span class="courseCode">MU 329</span><span class="courseTitle">Adv. Aural Skills</span><div class="credits">2</div><div class="spring only">&#10048;</div><div class="courseTime">10a MWF</div></div>					
+					<div class="class notDone music"><span class="courseCode">ML 2XX</span><span class="courseTitle">Applied Lessons</span><div class="credits">1</div><div class="courseTime">2p T*</div></div>
+					<div class="pensemble class notDone music slo3"><span class="courseCode">ME 2XX</span><span class="courseTitle">Primary Ensemble</span><div class="p ensemble credits">1</div></div>
+					<div class="sensemble class notDone music slo3"><span class="courseCode">ME 2XX</span><span class="courseTitle">Secondary Ensemble</span><div class="s ensemble credits">0</div></div>
+					<div class="class notDone genEd slo2 nonHonors summerClass"><span class="courseCode">EN XXX</span><span class="courseTitle">Literature</span><div class="credits">3</div><div class="summer badge">&#10039;</div><div class="online badge">&#128435;</div></div>
+					<div class="class notDone genEd slo8 summerClass"><span class="courseCode">CS XXX</span><span class="courseTitle">Computer Science</span><div class="credits">3</div><div class="summer badge">&#10039;</div><div class="online badge">&#128435;</div></div>
+					<div class="class notDone genEd slo9 summerClass"><span class="courseCode">XX XXX</span><span class="courseTitle">Wellness</span><div class="credits">2</div><div class="summer badge">&#10039;</div><div class="online badge">&#128435;</div></div>
+				</div>
+			</div>
+			<div class="semester">
+				<h2 class="semesterName"><div class="fall bigBadge">&#10086;</div>Fall <span class="year">3</span> <span class="semesterCredits" id="semester5">#</span></h2>
+				<div class="fallSem semesterList" id="5">
+					<div class="fallClass class notDone music"><span class="courseCode">MU 310</span><span class="courseTitle">Basic Conducting</span><div class="credits">2</div><div class="fall only">&#10086;</div><div class="courseTime">9a MWF</div></div>
+					<div class="fallClass class notDone music"><span class="courseCode">MU 320</span><span class="courseTitle">Comp. and Arr.</span><div class="credits">3</div><div class="fall only">&#10086;</div><div class="courseTime">10a MWF</div></div>
+					<div class="class notDone music"><span class="courseCode">ML 3XX</span><span class="courseTitle">Applied Lessons</span><div class="credits">1</div><div class="jqe badge">&#119136;</div><div class="courseTime">2p T*</div></div>
+					<div class="pensemble class notDone music slo3"><span class="courseCode">ME 3XX</span><span class="courseTitle">Primary Ensemble</span><div class="p ensemble credits">0</div></div>
+					<div class="sensemble class notDone music slo3"><span class="courseCode">ME 3XX</span><span class="courseTitle">Secondary Ensemble</span><div class="s ensemble credits">1</div></div>					
+					<div class="class notDone genEd cmp12 cmp3 summerClass" id="id301"><span class="courseCode">ID 301</span><span class="courseTitle">Critical Thinking Sem.</span><div class="credits">3</div><div class="minCredits badge">60</div><div class="summer badge">&#10039;</div><div class="online badge">&#128435;</div></div>
+					<div class="class notDone"><span class="courseCode">XX XXX</span><span class="courseTitle">Electives</span><div class="credits">3</div></div>
+					<div class="class notDone"><span class="courseCode">XX XXX</span><span class="courseTitle">Electives</span><div class="credits">2</div></div>					
+				</div>
+			</div>
+			<div class="semester">
+				<h2 class="semesterName"><div class="spring bigBadge">&#10048;</div>Spring <span class="year">3</span> <span class="semesterCredits" id="semester6">#</span></h2>
+				<div class="springSem semesterList" id="6">
+					<div class="springClass class notDone music cmp3 canBeHonors"><span class="courseCode">MU 303</span><span class="courseTitle">Music History I</span><div class="credits">3</div><div class="spring only">&#10048;</div><div class="courseTime">10a MWF</div></div>
+					<div class="class notDone music"><span class="courseCode">ML 3XX</span><span class="courseTitle">Applied Lessons</span><div class="credits">1</div><div class="jqe badge">&#119136;</div><div class="courseTime">2p T*</div></div>
+					<div class="pensemble class notDone music slo3"><span class="courseCode">ME 3XX</span><span class="courseTitle">Primary Ensemble</span><div class="p ensemble credits">0</div></div>
+					<div class="sensemble class notDone music slo3"><span class="courseCode">ME 3XX</span><span class="courseTitle">Secondary Ensemble</span><div class="s ensemble credits">0</div></div>
+					<div class="class notDone genEd SLO10"><span class="courseCode">XX XXX</span><span class="courseTitle">Ethics</span><div class="credits">3</div></div>
+					<div class="class notDone"><span class="courseCode">XX XXX</span><span class="courseTitle">Electives</span><div class="credits">3</div></div>
+					<div class="class notDone"><span class="courseCode">XX XXX</span><span class="courseTitle">Electives</span><div class="credits">3</div></div>
+					<div class="class notDone"><span class="courseCode">XX XXX</span><span class="courseTitle">Electives</span><div class="credits">2</div></div>
+				</div>
+			</div>
+			<div class="semester">
+				<h2 class="semesterName"><div class="fall bigBadge">&#10086;</div>Fall <span class="year">4</span> <span class="semesterCredits" id="semester7">#</span></h2>
+				<div class="fallSem semesterList" id="7">
+					<div class="fallClass class notDone music cmp3 canBeHonors"><span class="courseCode">MU 304</span><span class="courseTitle">Music History II</span><div class="credits">3</div><div class="courseTime">12:30p TR</div><div class="fall only">&#10086;</div></div>
+					<div class="class notDone music"><span class="courseCode">ML 4XX</span><span class="courseTitle">Applied Lessons</span><div class="credits">1</div><div class="jqe badge">&#119136;</div><div class="courseTime">2p T*</div></div>
+					<div class="pensemble class notDone music slo3"><span class="courseCode">ME 4XX</span><span class="courseTitle">Primary Ensemble</span><div class="p ensemble credits">0</div></div>
+					<div class="sensemble class notDone music slo3"><span class="courseCode">ME 4XX</span><span class="courseTitle">Secondary Ensemble</span><div class="s ensemble credits">0</div></div>					
+					<div class="class notDone genEd slo4 summerClass"><span class="courseCode">HI X1X</span><span class="courseTitle">History</span><div class="credits">3</div><div class="summer badge">&#10039;</div><div class="online badge">&#128435;</div></div>
+					<div class="class notDone"><span class="courseCode">XX XXX</span><span class="courseTitle">Electives</span><div class="credits">3</div></div>
+					<div class="class notDone"><span class="courseCode">XX XXX</span><span class="courseTitle">Electives</span><div class="credits">3</div></div>
+					<div class="class notDone"><span class="courseCode">XX XXX</span><span class="courseTitle">Electives</span><div class="credits">2</div></div>
+				</div>
+			</div>
+			<div class="semester" id="lastNormalSemester">
+				<h2 class="semesterName"><div class="spring bigBadge">&#10048;</div>Spring <span class="year">4</span> <span class="semesterCredits" id="semester8">#</span></h2>
+				<div class="springSem semesterList" id="8">
+					<div class="class notDone music canBeHonors"><span class="courseCode">MU 49X</span><span class="courseTitle">Senior Recital</span><div class="credits">1</div><div class="jqe badge">&#119136;</div><div class="courseTime">2p T*</div></div>
+					<div class="pensemble class notDone music slo3"><span class="courseCode">ME 4XX</span><span class="courseTitle">Primary Ensemble</span><div class="p ensemble credits">0</div></div>
+					<div class="sensemble class notDone music slo3"><span class="courseCode">ME 4XX</span><span class="courseTitle">Secondary Ensemble</span><div class="s ensemble credits">0</div></div>	
+					<div class="class notDone"><span class="courseCode">XX XXX</span><span class="courseTitle">Electives</span><div class="credits">3</div></div>
+					<div class="class notDone"><span class="courseCode">XX XXX</span><span class="courseTitle">Electives</span><div class="credits">3</div></div>
+					<div class="class notDone"><span class="courseCode">XX XXX</span><span class="courseTitle">Electives</span><div class="credits">3</div></div>
+					<div class="class notDone"><span class="courseCode">XX XXX</span><span class="courseTitle">Electives</span><div class="credits">3</div></div>
+				</div>
+			</div>
+		</div>
+	</body>
+<html>

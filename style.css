@@ -1,0 +1,469 @@
+* {
+	font-family: arial;
+}
+
+body {
+    -youbkit-touch-callout: none;
+    -youbkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+	
+	background: gainsboro;
+}
+
+#topBar {
+	height: 60px;
+	background-color: black;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+}
+
+	#title {
+		display: inline-block;
+		float: left;
+		width: 180px;
+		text-align: center;
+		height: 60px;
+		line-height: 60px;
+		font-size: 50px;
+		background-color: black;
+		color: white;
+	}
+	
+	#totalCredits, #yearInSchool {
+		font-size: 25px;
+		cursor: auto;
+	}
+	
+	.menuInfo.calNotDone {
+		background-color: red;
+		cursor: pointer;
+	}
+
+	#fileSelect {
+		display: none;
+	}
+
+	.menuButton, .menuInfo, .titleInfo {
+		display: inline-block;
+		float: left;
+		width: 3.5%;
+		text-align: center;
+		height: 60px;
+		line-height: 60px;
+		font-size: 40px;
+		background-color: black;
+		color: white;
+		cursor: pointer;
+	}
+	
+		.titleInfo {
+			font-size: 20px;
+		}
+		
+		.menuButton:hover {
+			background-color: silver;
+		}
+		
+		.added {
+			background-color: blue;
+		}
+
+		.menuButton.added:hover {
+			background-color: lightblue;
+		}
+		
+		#nameBlock {
+			width: 250px;
+			display: inline-block;
+			text-align: center;
+			height: 60px;
+			background-color: black;
+			color: white;
+			float: left;
+		}
+		
+		#name {
+			display: inline-block;
+			height: 100%;
+			border: none;
+			border-radius: 0;
+			width: 90%;
+			background-color: darkgray;
+			color: white;
+			vertical-align: top;
+			font-size: 20px;
+			padding-left: 10px;
+		}
+		
+		#submitName {
+			display: inline-block;
+			width: 10%;
+			height: 100%;
+			background-color: darkgray;
+			text-align: center;
+			font-size: 40px;
+			color: white;
+			cursor: pointer;
+		}
+		
+		#submitName:hover {
+			background-color: silver;
+			color: black;
+		}
+		
+		#nameWatermark {
+			position: fixed;
+			bottom: 20px;
+			right: 30px;
+			font-size: 172px;
+			color: gray;
+			z-index: -1;
+		}
+		
+	.spacer {
+		display: inline-block;
+		float: left;
+		width: 3%;
+	}
+
+	#loadAFile {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+
+#requirementsLists {
+	height: 60px;
+	position: fixed;
+	top: 60px;
+	left: 0;
+	right: 0;
+	z-index: 100;
+}
+
+	.slo, .ensembles, .requirement {
+		background-color: #E8E8E8;
+		display: inline-block;
+		height: 48px;
+		width: 3.6%;
+		margin: 2px 0px;
+		border-radius: 10px;
+		vertical-align: top;
+		padding: 6px 0;
+		text-align: center;
+	}
+	
+		
+		.slo {
+			border: 1px solid white;
+			cursor: help;
+		}
+		
+			.sloCode, .reqCourseCode {
+				padding: 1px;
+				border-radius: 3px;
+				font-size: 12px;
+				display: inline-block;
+			}
+			
+			.sloCode {
+				background-color: white;
+				color: gray;				
+			}
+			
+			.reqCourseCode {
+				background-color: gray;
+				color: white;
+			}
+		
+		.ensembles {
+			border: 1px solid pink;
+			cursor: help;
+		}
+		
+			.ensembleCount, .topBigBadge {
+				height: 18px;
+				line-height: 18px;
+				font-size: 14px;
+				width: 18px;
+				border-radius: 9px;
+				color: white;
+				background-color: darkgray;
+				float: right;
+				text-align: center;
+				margin: 4px;
+			}
+			
+			.topBadge {
+				height: 14px;
+				line-height: 14px;
+				width: 14px;
+				border-radius: 10px;
+				color: white;
+				background-color: darkgray;
+				display: inline-block;
+				float: right;
+				text-align: center;
+				margin: 6px 1px;
+				font-size: 9px;
+			}
+		
+		.requirement:hover, .techniques:hover {
+			border: 1px solid gray;
+			cursor: pointer;
+		}
+			
+		.musicReq {
+			border: 1px solid pink;
+		}
+		
+		.sloName, .ensembleName, .reqName {
+			font-size: 0.6em;
+		}
+
+#allSemestersAndRequirements {
+	position: fixed;
+	top: 120px;
+	bottom: 0;
+	left: 10px;
+	right: 0;
+	overflow-y: auto;
+	padding-bottom: 20px;
+}
+
+	#allSemestersAndRequirements::-webkit-scrollbar {
+	  width: 8px;
+	}
+
+	#allSemestersAndRequirements::-webkit-scrollbar-track {
+	  background: silver;
+	}
+
+	#allSemestersAndRequirements::-webkit-scrollbar-thumb {
+	  background-color: gray;
+	}
+
+	.semester {
+		display: inline-block;
+		vertical-align: top;
+		padding: 5px;
+	}
+	
+	.semesterName {
+		height: 34px;
+		line-height: 34px;
+		width: 340px;
+	}
+
+	.semesterList {
+		width: 340px;
+		padding-bottom: 20px;
+	}
+
+	.class {
+		border: 1px solid silver;
+		border-left: 7px solid black;
+		border-radius: 8px 16px 16px 8px;
+		height: 32px;
+		margin: 1px;
+		position: relative;
+		background-color: #E8E8E8;
+	}
+
+		.class:hover {
+			cursor: pointer;
+			border-top: 1px solid gray;
+			border-bottom: 1px solid gray;
+			border-right: 1px solid gray;
+		}
+
+		.courseCode {
+			background-color: gray;
+			color: white;
+			padding: 2px;
+			border-radius: 3px;
+			margin: 5px;
+			font-size: 12px;
+			display: inline-block;
+			vertical-align: middle;
+		}
+		
+		.courseTime {
+			background-color: olive;
+			color: white;
+			padding: 2px;
+			border-radius: 3px;
+			margin: 5px;
+			font-size: 12px;
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		.courseTitle {
+			font-size: 11px;
+			line-height: 32px;
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		.credits, .bigBadge, .repeat {
+			height: 28px;
+			line-height: 28px;
+			width: 28px;
+			border-radius: 14px;
+			color: white;
+			background-color: darkgray;
+			display: inline-block;
+			float: right;
+			text-align: center;
+			margin: 2px;
+		}
+		
+			.bigBadge.fall, .bigBadge.spring, .bigBadge.summer {
+				float: none;
+			}
+
+		.repeat {
+			background-color: red;
+			z-index: 100;
+			position: absolute;
+			right: 0;
+		}
+
+			.repeat:hover {
+				color: red;
+				background-color: white;
+			}
+
+	.only, .badge {
+		height: 16px;
+		line-height: 16px;
+		width: 16px;
+		border-radius: 8px;
+		color: white;
+		background-color: darkgray;
+		display: inline-block;
+		float: right;
+		text-align: center;
+		margin: 8px 2px 8px 2px;
+		font-size: 12px;
+	}
+
+	.jqe, .piano {
+		background-color: pink;
+	}
+
+	.honors {
+		background-color: #CFB53B;
+	}
+
+	.celp {
+		background-color: #B21900;
+	}
+
+	.globalXP {
+		background-color: black;
+	}
+
+	.minCredits {
+		background-color: black;
+	}
+	
+	.online {
+		background-color: olive;
+	}
+
+	.repeatedClass {
+		background-color: red;
+	}
+
+	.credits {
+		background-color: darkgray;
+	}
+
+	.ensembleCount {
+		background-color: gray;
+	}
+
+	.ensemble:hover {
+		background-color: lightgray;
+	}
+
+	.semesterCredits {
+		height: 32px;
+		line-height: 32px;
+		font-size: 18px;
+		width: 32px;
+		border-radius: 16px;
+		color: white;
+		background-color: black;
+		display: inline-block;
+		text-align: center;
+		vertical-align: top;
+		float: right;
+	}
+
+	.music {
+		border-left: 7px solid pink;
+	}
+
+
+	.genEd {
+		border-left: 7px solid white;
+	}
+	
+	.en100 {
+		background-color: white;
+		color: black;
+	}
+
+	.honorsClass {
+		border-left: 7px solid #CFB53B;
+	}
+
+	.celpClass {
+		border-left: 7px solid #B21900;
+	}
+
+	.registered {
+		background-color: papayawhip;
+	}
+
+	.done {
+		background-color: lightgreen;
+	}
+
+	.failed {
+		background-color: pink;
+	}
+
+	.repeated {
+		background-color: black;
+		color: gray;
+		cursor: help;
+	}
+
+	.fall {
+		background-color: darkgoldenrod;
+	}
+
+	.spring {
+		background-color: mediumorchid;
+	}
+	
+	.summer {
+		background-color: #cc5500;
+	}
+
+	.unique {
+		background-color: cadetblue;
+	}
+	
+	#cmp2Code:hover {
+		background-color: lightgrey;
+	}
