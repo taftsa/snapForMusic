@@ -839,6 +839,7 @@ $(document).on('click', '#honors', function(){
 			
 			$('.canBeHonors').addClass('honorsClass');
 			$('.canBeHonors .credits').after('<div class="honors badge">\uD83C\uDF96</div>');
+			$('.canBeHonors.recital .credits').html('3');
 			
 			$('.honorsClass').fadeOut(150).fadeIn(150).fadeOut(150).fadeIn(150);
 			
@@ -859,6 +860,7 @@ $(document).on('click', '#honors', function(){
 			
 			$('.canBeHonors').removeClass('honorsClass');
 			$('.canBeHonors .honors').remove();
+			$('.canBeHonors.recital .credits').html('1');
 			
 			$('.canBeHonors').fadeOut(150).fadeIn(150).fadeOut(150).fadeIn(150);
 			$('.nonHonors').fadeOut(150).fadeIn(150).fadeOut(150).fadeIn(150);
