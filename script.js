@@ -830,16 +830,16 @@ $(document).on('click', '#honors', function(){
 			$('#2').append('<div class="honorsClass class notDone slo1"><span class="courseCode">EN 115</span><span class="courseTitle">Adv. Pub. Speaking</span><div class="credits">3</div><div class="honors badge">\uD83C\uDF96</div><div class="spring only">❀</div><div class="courseTime">8a, 9:30a TR</div></div>');
 			$('#4').append('<div class="honorsClass class notDone slo2"><span class="courseCode">EN 221</span><span class="courseTitle">Sem. in Lit. Studies</span><div class="credits">3</div><div class="honors badge">\uD83C\uDF96</div><div class="spring only">❀</div><div class="courseTime">9a, 11a MWF</div></div>');
 			$('#3').append('<div class="honorsClass class notDone"><span class="courseCode">HN 295</span><span class="courseTitle">Special Topics in Honors</span><div class="credits">3</div><div class="honors badge">\uD83C\uDF96</div><div class="courseTime">12p MWF</div></div>');
-			$('#4').append('<div class="honorsClass class notDone"><span class="courseCode">HN 120</span><span class="courseTitle">Honors Colloquium</span><div class="credits">1</div><div class="honors badge">\uD83C\uDF96</div><div class="courseTime">6:30p ❦W, ❀M</div></div>');
+			$('#4').append('<div class="honorsClass class notDone"><span class="courseCode">HN 220</span><span class="courseTitle">Honors Colloquium</span><div class="credits">1</div><div class="honors badge">\uD83C\uDF96</div><div class="courseTime">6:30p ❦W, ❀M</div></div>');
 			$('#5').append('<div class="honorsClass class notDone"><span class="courseCode">HN 220</span><span class="courseTitle">Honors Colloquium</span><div class="credits">1</div><div class="honors badge">\uD83C\uDF96</div><div class="courseTime">6:30p ❦W, ❀M</div></div>');
-			$('#6').append('<div class="honorsClass class notDone"><span class="courseCode">HN 320</span><span class="courseTitle">Honors Colloquium</span><div class="credits">1</div><div class="honors badge">\uD83C\uDF96</div><div class="courseTime">6:30p ❦W, ❀M</div></div>');
-			$('#7').append('<div class="honorsClass class notDone"><span class="courseCode">HN 420</span><span class="courseTitle">Honors Colloquium</span><div class="credits">1</div><div class="honors badge">\uD83C\uDF96</div><div class="courseTime">6:30p ❦W, ❀M</div></div>');
+			$('#6').append('<div class="honorsClass class notDone"><span class="courseCode">HN 220</span><span class="courseTitle">Honors Colloquium</span><div class="credits">1</div><div class="honors badge">\uD83C\uDF96</div><div class="courseTime">6:30p ❦W, ❀M</div></div>');
+			$('#7').append('<div class="honorsClass class notDone"><span class="courseCode">HN 220</span><span class="courseTitle">Honors Colloquium</span><div class="credits">1</div><div class="honors badge">\uD83C\uDF96</div><div class="courseTime">6:30p ❦W, ❀M</div></div>');
+			$('#5').append('<div class="honorsClass class notDone"><span class="courseCode">HN 425</span><span class="courseTitle">Honors Capstone</span><div class="credits">3</div><div class="honors badge">\uD83C\uDF96</div><div class="courseTime">12:30p TR</div></div>');
 			
 			$('.nonHonors').remove();
 			
 			$('.canBeHonors').addClass('honorsClass');
 			$('.canBeHonors .credits').after('<div class="honors badge">\uD83C\uDF96</div>');
-			$('.canBeHonors.recital .credits').html('3');
 			
 			$('.honorsClass').fadeOut(150).fadeIn(150).fadeOut(150).fadeIn(150);
 			
@@ -860,7 +860,6 @@ $(document).on('click', '#honors', function(){
 			
 			$('.canBeHonors').removeClass('honorsClass');
 			$('.canBeHonors .honors').remove();
-			$('.canBeHonors.recital .credits').html('1');
 			
 			$('.canBeHonors').fadeOut(150).fadeIn(150).fadeOut(150).fadeIn(150);
 			$('.nonHonors').fadeOut(150).fadeIn(150).fadeOut(150).fadeIn(150);
