@@ -325,6 +325,7 @@ $(document).on('click', '.failed', function() {
 
 //Repeat a Class
 $(document).on('click', '.repeat', function(e) {
+	alert('Student must complete Academic Forgiveness Form to remove previous grade, with a limit of 5 per career. (https://limestonecollege.formstack.com/forms/academic_forgiveness_request_form)');
 	
 	//Make it so that the click only counts in the .repeat bubble, not its parent(s)
 	e.stopPropagation();
